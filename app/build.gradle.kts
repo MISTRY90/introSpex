@@ -45,4 +45,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.support.v4)
+
+    // Include the .aar file as a dependency
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
 }
