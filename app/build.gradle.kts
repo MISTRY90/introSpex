@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -47,6 +51,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.support.v4)
 
-    // Include the .aar file as a dependency
+    // Imported Libraries
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
 }

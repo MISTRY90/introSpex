@@ -9,15 +9,29 @@
 
     <TextView
         android:id="@+id/textBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="397dp"
+        android:layout_height="376dp"
+        android:autoSizeTextType="uniform"
         android:text="Loading Location"
-        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:autoSizeMaxTextSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.045" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/batteryTempChart"
+        android:layout_width="398dp"
+        android:layout_height="283dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
