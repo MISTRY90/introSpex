@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.an.deviceinfo.device.model.Battery
 import com.an.deviceinfo.location.LocationInfo
+import com.an.deviceinfo.device.model.Device
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -51,17 +52,26 @@ class MainActivity : AppCompatActivity() {
     private fun ShowData() {
         val locationInfo = LocationInfo(this)
         val battery = Battery(this)
+        val device=Device(this)
         val location = locationInfo.location
         val addr = location.addressLine1
         val city = location.city
         val state = location.state
         val country = location.countryCode
 
+        val model= device.model
+
         val textBox1 = findViewById<TextView>(R.id.textBox1)
+        val textBox2=findViewById<TextView>(R.id.textBox2)
         val batteryTempChart = findViewById<LineChart>(R.id.batteryTempChart)
 
         val text = "Your Location: ${addr}, ${city}, ${state} - ${country}"
         textBox1.text = text
+
+        val text1="Device Model: ${model}"
+        textBox2.text=text1
+
+
 
         // Add a 2 second interval
         val handler = Handler(Looper.getMainLooper())
