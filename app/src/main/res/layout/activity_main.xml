@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textBox1"
-        android:layout_width="368dp"
-        android:layout_height="221dp"
+        android:layout_width="397dp"
+        android:layout_height="376dp"
         android:autoSizeMaxTextSize="30sp"
         android:autoSizeTextType="uniform"
         android:text="Loading Location"
@@ -39,7 +39,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="296dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

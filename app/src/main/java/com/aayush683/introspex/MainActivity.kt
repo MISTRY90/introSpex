@@ -109,3 +109,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+// killing processes and network? is a must
