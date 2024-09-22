@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- styles.xml -->
+    <style name="networks">
+        <item name="android:textSize">40sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#F8FAFC</item>
+    </style>
+</resources>

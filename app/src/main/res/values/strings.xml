@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">introspex</string>
+    <string name="networks">
+        Networks
+    </string>
+
+    <string name="title">
+Home
+</string>
 </resources>
