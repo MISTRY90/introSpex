@@ -3,8 +3,13 @@
     <string name="networks">
         Networks
     </string>
-
-    <string name="title">
-Home
+    <string name="processes">
+Processes
 </string>
+
+    <string name="about">
+About
+</string>
+
+
 </resources>

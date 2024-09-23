@@ -7,8 +7,34 @@
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
-    <style name="title">
-        <item name="android:textSize">20sp</item>
+    <style name="title01">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">#F8FAFC</item>
+    </style>
+    <style name="title02">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#F8FAFC</item>
+    </style>
+
+    <style name="title03">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#F8FAFC</item>
+    </style>
+
+    <style name="title04">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#F8FAFC</item>
+    </style>
+
+    <style name="processes">
+        <item name="android:textSize">40sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="about">
+        <item name="android:textSize">40sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>
