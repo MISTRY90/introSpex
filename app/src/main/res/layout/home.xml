@@ -52,37 +52,33 @@
                 android:background="@drawable/vector" />
 
             <!-- Chart 3 -->
-            <View
-                android:id="@+id/chart3"
-                android:layout_width="match_parent"
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/cpuChart"
+                android:layout_width="300dp"
                 android:layout_height="182dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/vector">
-                <!-- Add Chart here -->
-            </View>
+                android:background="@drawable/vector" />
 
             <!-- Chart 4 -->
-            <View
-                android:id="@+id/chart4"
-                android:layout_width="match_parent"
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/storageChart"
+                android:layout_width="300dp"
                 android:layout_height="182dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/vector">
-                <!-- Add Chart here -->
-            </View>
+                android:background="@drawable/vector" />
+
 
             <!-- Chart 5 -->
-            <View
-                android:id="@+id/chart5"
-                android:layout_width="match_parent"
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/batteryChart"
+                android:layout_width="300dp"
                 android:layout_height="182dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/vector">
-                <!-- Add Chart here -->
-            </View>
+                android:background="@drawable/vector" />
+
 
             <!-- Chart 6 -->
             <View
