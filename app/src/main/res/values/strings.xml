@@ -1,15 +1,6 @@
 <resources>
     <string name="app_name">introspex</string>
-    <string name="networks">
-        Networks
-    </string>
-    <string name="processes">
-Processes
-</string>
-
-    <string name="about">
-About
-</string>
-
-
+    <string name="networks">Networks</string>
+    <string name="processes">Package Permissions</string>
+    <string name="about">About</string>
 </resources>

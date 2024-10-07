@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/android_sma"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,9 +9,9 @@
     android:clipToOutline="true">
 
     <TextView
-        android:id="@+id/processes"
-        android:layout_width="232dp"
-        android:layout_height="50dp"
+        android:id="@+id/AppListTitle"
+        android:layout_width="414dp"
+        android:layout_height="94dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:gravity="center_horizontal|center_vertical"
@@ -20,328 +21,40 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <RelativeLayout
-        android:id="@+id/frame_34"
-        android:layout_width="410dp"
-        android:layout_height="588dp"
-        android:layout_alignParentLeft="true"
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="542dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="2dp"
-        android:elevation="4dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672">
-
-
-
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/row_1"
+            android:id="@+id/networkHolder"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <View
-                android:id="@+id/rectangle_6"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_7"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_8"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
+            android:layout_marginEnd="2dp"
+            android:elevation="4dp"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row_2"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="81dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <View
-                android:id="@+id/rectangle_5"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_4"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_3"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row_3"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="158dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <View
-                android:id="@+id/rectangle_2"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_1"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_0"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row_4"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="237dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <View
-                android:id="@+id/rectangle_01"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_02"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_03"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/row_5"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="316dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <View
-                android:id="@+id/rectangle_04"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_05"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_06"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row_6"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="395dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <View
-                android:id="@+id/rectangle_07"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_08"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_09"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/row_7"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="474dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <View
-                android:id="@+id/rectangle_10"
-                android:layout_width="104dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="0dp"
-                android:background="@drawable/rectangle_6"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_11"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rectangle_7"
-                android:elevation="4dp" />
-
-            <View
-                android:id="@+id/rectangle_12"
-                android:layout_width="102dp"
-                android:layout_height="57dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/rectangle_8"
-                android:elevation="4dp" />
-        </LinearLayout>
-
-    </RelativeLayout>
-
-
-
+    </ScrollView>
     <RelativeLayout
         android:id="@+id/tab_bar"
         android:layout_width="match_parent"
@@ -372,7 +85,7 @@
             android:gravity="center">
 
             <LinearLayout
-                android:id="@+id/tab_1"
+                android:id="@+id/homeButton"
                 android:layout_width="97dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -423,7 +136,7 @@
             </LinearLayout>
             <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/tab_4"
+                android:id="@+id/processButton"
                 android:layout_width="97dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -451,7 +164,7 @@
             </LinearLayout>
             <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/tab_5"
+                android:id="@+id/aboutButton"
                 android:layout_width="97dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
