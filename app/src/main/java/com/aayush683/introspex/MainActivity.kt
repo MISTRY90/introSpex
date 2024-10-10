@@ -16,6 +16,7 @@ import android.widget.RelativeLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var storageChart: PieChart
     private lateinit var batteryChart: LineChart
     private val batteryArr = ArrayList<Entry>()
+    private var initialProcess = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,11 +68,15 @@ class MainActivity : AppCompatActivity() {
             showHome()
             mapButtons()
         } else if (button == "processButton") {
+            if (!initialProcess) {
+                Toast.makeText(this,"Loading Packages, Please wait", Toast.LENGTH_LONG).show();
+                initialProcess = true;
+            }
             showProcess()
             mapButtons()
         } else if (button == "aboutButton") {
             showAbout()
-//            mapButtons()
+            mapButtons()
         }
     }
 
@@ -327,7 +333,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("ROWS", rows.toString())
         val appListTitle = findViewById<TextView>(R.id.AppListTitle)
-        appListTitle.text = "${rows} Packages Found"
+        appListTitle.text = getString(R.string.packages_found, rows.toString())
     }
 
     // Function to show a pop-up dialog with app permissions

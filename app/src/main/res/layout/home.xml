@@ -135,35 +135,11 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/networkButton"
-                android:layout_width="97dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/icon02"
-                    android:layout_width="match_parent"
-                    android:layout_height="51dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:clipToOutline="true"
-                    />
-
-                <TextView
-                    android:id="@+id/title02"
-                    android:layout_width="match_parent"
-                    android:layout_height="41dp"
-                    android:text="Network"
-                    android:textAppearance="@style/title02"
-                    android:lineSpacingExtra="0sp"
-                    android:gravity="center_horizontal|center_vertical"
-                    />
-            </LinearLayout>
-            <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/processButton"
                 android:layout_width="97dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 

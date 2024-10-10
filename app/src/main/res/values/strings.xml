@@ -3,4 +3,5 @@
     <string name="networks">Networks</string>
     <string name="processes">Package Permissions</string>
     <string name="about">About</string>
+    <string name="packages_found">%1$s Packages Found</string>
 </resources>
