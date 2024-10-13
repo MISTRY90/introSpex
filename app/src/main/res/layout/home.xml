@@ -7,90 +7,92 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:clipToOutline="true">
-    <ScrollView
-        android:id="@+id/chartHolder"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="Interactive Charts"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        android:id="@+id/swipeContainerHome"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086">
+        app:layout_constraintBottom_toTopOf="@+id/tab_bar01">
 
-
-        <!-- LinearLayout to hold all charts horizontally -->
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/chartHolder"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:isScrollContainer="true"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
 
-            <TextView
-                android:id="@+id/textView"
+
+            <!-- LinearLayout to hold all charts horizontally -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textAlignment="center"
-                android:text="INTROSPEX" />
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:isScrollContainer="true"
+                android:orientation="vertical">
 
-            <!-- Chart 1 -->
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/phoneTempChart"
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/vector" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INTROSPEX"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
 
-            <!-- Chart 2 -->
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/usedMemChart"
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/vector" />
+                <!-- Chart 1 -->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/phoneTempChart"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/vector" />
 
-            <!-- Chart 3 -->
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/cpuChart"
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/vector" />
+                <!-- Chart 2 -->
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/usedMemChart"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/vector" />
 
-            <!-- Chart 4 -->
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/storageChart"
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/vector" />
+                <!-- Chart 3 -->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/cpuChart"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/vector" />
+
+                <!-- Chart 4 -->
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/storageChart"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/vector" />
 
 
-            <!-- Chart 5 -->
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/batteryChart"
-                android:layout_width="350dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/vector" />
+                <!-- Chart 5 -->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/batteryChart"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/vector" />
 
-        </LinearLayout>
-    </ScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
     <!-- Bottom Bar -->
     <RelativeLayout
@@ -118,11 +120,14 @@
 
                 <RelativeLayout
                     android:id="@+id/icon01"
-                    android:layout_width="match_parent"
-                    android:layout_height="51dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:clipToOutline="true" />
+                    android:clipToOutline="true"
+                    android:background="@drawable/home_svgrepo_com"/>
 
                 <TextView
                 android:id="@+id/title01"
@@ -146,18 +151,21 @@
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/icon03"
-                    android:layout_width="match_parent"
-                    android:layout_height="51dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:clipToOutline="true"
+                    android:background="@drawable/process_on_vm_svgrepo_com"
                     />
 
                 <TextView
                     android:id="@+id/title03"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
-                    android:text="Processes"
+                    android:text="Pakages"
                     android:textAppearance="@style/title03"
                     android:lineSpacingExtra="0sp"
                     android:gravity="center_horizontal|center_vertical"
@@ -174,18 +182,21 @@
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/icon04"
-                    android:layout_width="match_parent"
-                    android:layout_height="51dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:clipToOutline="true"
+                    android:background="@drawable/settings_svgrepo_com"
                     />
 
                 <TextView
                     android:id="@+id/title04"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
-                    android:text="About"
+                    android:text="Device Info"
                     android:textAppearance="@style/title04"
                     android:lineSpacingExtra="0sp"
                     android:gravity="center_horizontal|center_vertical"
