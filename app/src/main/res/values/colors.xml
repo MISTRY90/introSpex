@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cyan">#35BABE</color>
     <color name="transparent">#ffffff00</color>
+
+    <!-- Additional Colors -->
+    <color name="dark_gray">#212121</color> <!-- Background Color -->
+    <color name="light_gray">#B0BEC5</color> <!-- Text/Labels -->
+    <color name="blue">#42A5F5</color>      <!-- Accent/Highlight -->
+    <color name="green">#66BB6A</color>     <!-- Success/Positive -->
+    <color name="orange">#FFA726</color>    <!-- Warning/Alert -->
+    <color name="red">#EF5350</color>       <!-- Error/Negative -->
 </resources>

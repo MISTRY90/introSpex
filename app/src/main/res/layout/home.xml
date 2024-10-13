@@ -7,11 +7,29 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:clipToOutline="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="252dp"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="-34sp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/about"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/swipeContainerHome"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintBottom_toTopOf="@+id/tab_bar01">
 
         <ScrollView
@@ -30,14 +48,6 @@
                 android:isScrollContainer="true"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="INTROSPEX"
-                    android:textAlignment="center"
-                    android:textSize="20dp" />
-
                 <!-- Chart 1 -->
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/phoneTempChart"
@@ -47,6 +57,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="25dp"
                     android:background="@drawable/vector" />
+
 
                 <!-- Chart 2 -->
                 <com.github.mikephil.charting.charts.PieChart
@@ -112,47 +123,19 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <LinearLayout
-            android:id="@+id/homeButton"
-            android:layout_width="97dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
-                <RelativeLayout
-                    android:id="@+id/icon01"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:clipToOutline="true"
-                    android:background="@drawable/home_svgrepo_com"/>
-
-                <TextView
-                android:id="@+id/title01"
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:gravity="center_horizontal|center_vertical"
-                android:lineSpacingExtra="0sp"
-                android:text="Home"
-                android:textAppearance="@style/title01" />
-
-            </LinearLayout>
             <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/processButton"
                 android:layout_width="97dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/icon03"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
                     android:layout_alignParentLeft="true"
@@ -165,11 +148,41 @@
                     android:id="@+id/title03"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
-                    android:text="Pakages"
+                    android:text="Packages"
                     android:textAppearance="@style/title03"
                     android:lineSpacingExtra="0sp"
                     android:gravity="center_horizontal|center_vertical"
                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeButton"
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/icon01"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:clipToOutline="true"
+                    android:background="@drawable/home_svgrepo_com"/>
+
+                <TextView
+                    android:id="@+id/title01"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:lineSpacingExtra="0sp"
+                    android:text="Home"
+                    android:textAppearance="@style/title01" />
 
             </LinearLayout>
             <LinearLayout
@@ -182,8 +195,8 @@
                 <RelativeLayout
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/icon04"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
                     android:layout_alignParentLeft="true"
@@ -196,7 +209,7 @@
                     android:id="@+id/title04"
                     android:layout_width="match_parent"
                     android:layout_height="41dp"
-                    android:text="Device Info"
+                    android:text="Info"
                     android:textAppearance="@style/title04"
                     android:lineSpacingExtra="0sp"
                     android:gravity="center_horizontal|center_vertical"
@@ -204,6 +217,6 @@
 
             </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
